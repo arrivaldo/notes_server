@@ -8,7 +8,7 @@ import noteRouter from './routes/note.js'
 
 const app = express()
 app.use(cors({
-    origin: "https://notes-frontend-beryl.vercel.app/",
+    origin: "https://notes-frontend-beryl.vercel.app",
     credentials: true
 }))
 app.use(express.json())
