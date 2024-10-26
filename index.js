@@ -12,9 +12,10 @@ app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/note', noteRouter)
 
+const PORT = process.env.PORT || 5000; // Use the PORT environment variable or default to 5000
 
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     connectToMongoDB()
-    console.log("Server is running")
+    console.log(`Server is running on port ${PORT}`);
 })
